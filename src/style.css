@@ -1,0 +1,99 @@
+:root {
+  --bg: #05060f;
+  --panel: rgba(18, 20, 42, 0.92);
+  --line: #3b4270;
+  --text: #e8eaf8;
+  --muted: #8890b0;
+  --mono: 'Consolas', 'Courier New', monospace;
+  color-scheme: dark;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.btn {
+  background: #2d4f9e;
+  color: #fff;
+  border: 2px solid #6fb8ff;
+  box-shadow: 0 0 0 2px #000, 3px 3px 0 #000;
+  padding: 5px 12px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) {
+  background: #3a63c2;
+}
+.btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 2px #000, 1px 1px 0 #000;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn.sm {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.btn.big {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #9c1f2c;
+  border-color: #ff6b6b;
+}
+.btn.big small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.btn.ghost {
+  background: #161a33;
+  border-color: var(--line);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+}
+.panel {
+  background: #12142a;
+  border: 3px solid var(--line);
+  box-shadow: 0 0 0 3px #000, 6px 6px 0 #000;
+  padding: 12px 14px;
+}
+.panel h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffe066;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+}

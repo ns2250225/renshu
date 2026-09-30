@@ -43,7 +43,7 @@ const guide = computed(() => SEAL_GUIDE[seal.value])
           <span>{{ SEAL_MAP[s].zh }}</span>
         </div>
       </div>
-      <p class="note">摄像头视角 · 手背朝镜头 · 拇指被遮挡不必刻意摆放</p>
+      <p class="note">实拍示例来自 NARUTO-HandSignDetection · 请按画面中的手势结印</p>
     </template>
   </div>
 </template>
@@ -126,7 +126,7 @@ ol {
 .thumb.cur {
   opacity: 1;
 }
-.thumb.cur :deep(svg) {
+.thumb.cur :deep(.seal-image) {
   border-color: #ffe066;
 }
 .note {

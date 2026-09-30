@@ -57,7 +57,7 @@ const learned = computed(() => JUTSU_LIST.filter((j) => state.records[j.id]).len
             <p class="tip">💡 {{ SEAL_GUIDE[s.id].tip }}</p>
           </div>
         </article>
-        <p class="note">示意图为摄像头视角：手背朝向镜头，拇指收在内侧被遮挡，因此图中不画拇指；画面已镜像，左侧即你的左手。各流派手势略有差异，识别不稳时可在「训练」中录入自己的手势样本。</p>
+        <p class="note">手势示例图来自 <a href="https://github.com/Kazuhito00/NARUTO-HandSignDetection" target="_blank" rel="noreferrer">NARUTO-HandSignDetection</a>。各流派手势略有差异，识别不稳时可在「训练」中录入自己的手势样本。</p>
       </div>
       <div v-else class="grid">
         <article v-for="j in list" :key="j.id" class="card" :class="{ locked: !state.records[j.id] }" :style="{ '--c': ELEMENT_MAP[j.element].color }">
@@ -186,7 +186,7 @@ h2 small {
 .s:hover {
   border-color: #ffe066;
 }
-.s :deep(svg) {
+.s :deep(.seal-image) {
   border-width: 1px;
 }
 .seals-tab.on {
@@ -240,6 +240,9 @@ ol {
   font-size: 11px;
   color: var(--muted);
   margin: 2px 0;
+}
+.note a {
+  color: #6fb8ff;
 }
 .s i {
   font-style: normal;
